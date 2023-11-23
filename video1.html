@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html> 
+<html> 
+<body> 
+
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="file:///C:/Users/KG_electronics/Downloads/arash-feat-helena-dooset-daram_187421.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+  <br><br>
+  <button onclick="volumeUp()">Volume Up</button>
+  <button onclick="volumeDown()">Volume Down</button>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+
+function volumeUp() {
+  if (myVideo.volume < 1.0) {
+    myVideo.volume += 0.1;
+  }
+}
+
+function volumeDown() {
+  if (myVideo.volume > 0.0) {
+    myVideo.volume -= 0.1;
+  }
+}
+</script> 
+
+<p>Official music video <a href="https://cleepr.ru/arash-feat-helena/dooset-daram_klip-041e0131.html#getmp4" target="_blank">Video origin</a>.</p>
+
+</body> 
+</html>
